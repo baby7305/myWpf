@@ -6,4 +6,36 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="images\berries.jpg" />
+    <None Remove="images\cat.png" />
+    <None Remove="images\cherries.jpg" />
+    <None Remove="images\dog.png" />
+    <None Remove="images\downarrow.png" />
+    <None Remove="images\fish.png" />
+    <None Remove="images\flower.jpg" />
+    <None Remove="images\help.gif" />
+    <None Remove="images\pinkcherries.jpg" />
+    <None Remove="images\steel.png" />
+    <None Remove="images\tulip_farm.jpg" />
+    <None Remove="images\uparrow.png" />
+    <None Remove="images\waterlilies.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\berries.jpg" />
+    <Resource Include="images\cat.png" />
+    <Resource Include="images\cherries.jpg" />
+    <Resource Include="images\dog.png" />
+    <Resource Include="images\downarrow.png" />
+    <Resource Include="images\fish.png" />
+    <Resource Include="images\flower.jpg" />
+    <Resource Include="images\help.gif" />
+    <Resource Include="images\pinkcherries.jpg" />
+    <Resource Include="images\steel.png" />
+    <Resource Include="images\tulip_farm.jpg" />
+    <Resource Include="images\uparrow.png" />
+    <Resource Include="images\waterlilies.jpg" />
+  </ItemGroup>
+
 </Project>
