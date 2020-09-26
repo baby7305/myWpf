@@ -24,5 +24,10 @@ namespace myWpf
         {
             InitializeComponent();
         }
+
+        private void HandleClick(object sender, RoutedEventArgs e)
+        {
+            Button1.Content = "Hello World";
+        }
     }
 }
