@@ -1,17 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+// // Copyright (c) Microsoft. All rights reserved.
+// // Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+using System;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Windows.Media.Animation;
 
 namespace myWpf
 {
@@ -20,9 +12,34 @@ namespace myWpf
     /// </summary>
     public partial class MainWindow : Window
     {
+        #region Globals
+
+        private Trackball _trackball;
+
+        #endregion
+
         public MainWindow()
         {
             InitializeComponent();
         }
+
+        private void OnLoaded(object sender, EventArgs e)
+        {
+            // setup trackball for moving the model around
+            _trackball = new Trackball();
+            _trackball.Attach(this);
+            _trackball.Slaves.Add(myViewport3D);
+            _trackball.Enabled = true;
+        }
+
+        #region Events
+
+        private void OnImage1Animate(object sender, RoutedEventArgs e)
+        {
+            var s = (Storyboard) FindResource("RotateStoryboard");
+            BeginStoryboard(s);
+        }
+
+        #endregion
     }
 }
